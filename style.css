@@ -79,7 +79,14 @@ body{
     background-color: white;
     height: 100vh;
     position: relative;
+    transition: 0.3s ease;
 }
+
+#side-nav.active{
+    left: 0;
+}
+
+
 
 .logo-section{
     display: flex;   
@@ -173,6 +180,7 @@ body{
 
 .main-content{
     width: calc(100% - 256px);
+    transition: 0.3s ease;
 }
 
 header{
@@ -196,6 +204,7 @@ header{
     display: flex;
     flex: 1 0 auto;
     margin-right: 24px;
+    align-items: center;
 }
 
 .greetings svg{
@@ -270,9 +279,9 @@ header{
     width: 100%;
 }
 
-#search input:focus + #searchbar {
-    border: 1px solid black;
-}
+.searchbar:focus-within {
+    border: 2px solid var(--light-primary);
+  }
 
 
 .share-work{
@@ -297,8 +306,9 @@ header{
 
 .share-work label:hover,
 .share-work label:focus{
-background-color: var(--light-primary-container);
+    background-color: var(--light-surface-variant);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+    
 }
 
 
@@ -358,17 +368,18 @@ background-color: var(--light-primary-container);
 .projects-section{
     display: grid;
     grid-template-columns: 1fr 192px;
-    grid-template-rows: calc(100vh - 76px);
+    grid-template-rows: calc(100vh - 128px);
     overflow: none;
 }
 
 
 #project {
+    position: relative;
     grid-area: 1/1/2/2;
     width: 100%;
-    height: calc(100vh - 76px);
+    height: calc(100vh - 128px);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
     grid-template-rows: 48px;
     grid-auto-rows: max-content;
     padding: 0px 28px;
@@ -378,6 +389,10 @@ background-color: var(--light-primary-container);
 }
 
 #project h3{
+    z-index: 5;
+    position: sticky;
+    background-color: var(--light-surface-variant);
+    top: 0px;
     padding: 12px 0;
     grid-area: 1/1/2/-1;
     font-size: 16px;
@@ -461,9 +476,9 @@ background-color: var(--light-primary-container);
     flex-direction: column;
     flex: 1 0 auto;
     background-color: var(--light-background);
-    overflow: scroll;
-    height: calc(100vh-76px);
     overflow: auto;
+    height: calc(100vh - 128px);
+    /* overflow: auto; */
     
 }
 
@@ -580,4 +595,179 @@ background-color: var(--light-primary-container);
     display: flex;
     align-items: center;
     width: max-content;
+}
+
+
+@media (max-width: 786px){
+    .side-nav {
+        width: 256px;
+        position: fixed;
+        left: -260px;
+        transition: 0.3s ease;
+    }
+    #side-nav.active ~ .main-content {
+        width: calc(100% - 256px);
+        position: relative;
+        left: 256px;
+        transition: 0.3s ease;
+        
+    }
+
+    .main-content{
+        width: 100%;
+        
+        
+    }
+
+    .greetings svg {
+        width: 40px;
+        margin-right: 16px;
+        fill: var(--light-on-background);
+        display: inline;
+    }
+    .greetings >img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+        margin-right: 16px;
+    }
+
+    #intro p {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 400;
+        color: var(--light-on-background);
+    }
+
+    #intro h4 {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+
+    #project {
+        grid-area: 1/1/2/2;
+        width: 100%;
+        height: calc(100vh - 76px);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(96px, 1fr));
+        grid-template-rows: 48px;
+        grid-auto-rows: max-content;
+        padding: 0px 16px;
+        grid-gap: 16px;
+        justify-content: flex-start;
+        overflow: auto;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .side-nav {
+        width: 200px;
+        position: fixed;
+        left: -200px;
+        transition: 0.3s ease;
+    }
+    #side-nav.active ~ .main-content {
+        width: calc(100% - 200px);
+        position: relative;
+        left: 200px;
+        transition: 0.3s ease;
+        
+    }
+
+    .main-content{
+        width: 100%;
+        
+        
+    }
+
+
+    header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+        background-color: var(--light-background);
+    }
+    .searchbar {
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        height: 32px;
+        padding: 0 12px;
+        border-radius: 8px;
+        box-shadow: inset 0px 0px 4px var(--light-outline);
+        margin-right: 8px;
+    }
+
+    .share-work label {
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 12px;
+        border: 1px solid var(--light-outline-variant);
+        border-radius: 8px;
+        background-color: var(--light-background);
+        cursor: pointer;
+    }
+    
+    .trend{
+        display: flex !important;
+    }
+
+    nav
+
+    #project {
+        grid-area: 1/1/2/2;
+        width: 100%;
+        height: calc(100vh - 76px);
+        display: grid;
+        grid-template-columns: repeat(1, minmax(96px, 1fr));
+        grid-template-rows: 48px;
+        grid-auto-rows: max-content;
+        padding: 0px 16px;
+        grid-gap: 16px;
+        justify-content: flex-start;
+        overflow: auto;
+    }
+
+    .projects-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: calc(100vh - 128px);
+        overflow: none;
+    }
+
+    #side-update {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+        background-color: var(--light-background);
+        overflow: hidden;
+        height: calc(100vh - 128px);
+        /* overflow: auto; */
+    }
+    
+    #side-update .latest h3 {
+        margin-top: 8px;
+    }
+    
+    #side-update .trending h3 {
+        margin-top: 8px;
+    }
+
+    #side-update .trending .news:first-of-type {
+        border-top: 1px solid var(--light-outline-variant);
+    }
 }
