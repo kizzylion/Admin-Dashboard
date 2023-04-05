@@ -5,198 +5,253 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link href="./sass/main.scss" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script defer src="./script.js"></script>
+
     <title>Endata - Admin Dashboard</title>
 </head>
-<body>
-    <section id="side-nav" class="side-nav">
-        <a href="#" class="logo-section">
-            <img src="./img-collections/Enddata-logo2.png" alt="Endata logo"> 
-            <h2>EnData</h2>
+<body class="d-flex">
+    <section id="side-nav" class="d-lg-block col-6 col-lg-2 border-end ">
+        <a href="#" class="logo-section d-flex p-4 align-items-center fs-3" style=" line-height: 36px; text-decoration: none;">
+            <img src="./img-collections/Enddata-logo2.png" class="me-2 " alt="Endata logo" style=" width: 48px; object-fit: cover;"> 
+            <span class="flex-fill d-none d-lg-flex">EnData</span> 
         </a>
-        <div class="menu-section">
-            <li class="dashboard active">
-                <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>home</title><path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg></i> <a href="#">Dashboard</a>
-            </li>
-            <li class="Profile">
-                <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>account-outline</title><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M12,13C14.67,13 20,14.33 20,17V20H4V17C4,14.33 9.33,13 12,13M12,14.9C9.03,14.9 5.9,16.36 5.9,17V18.1H18.1V17C18.1,16.36 14.97,14.9 12,14.9Z" /></svg></i> <a href="#">Profile</a>
-            </li>
-            <li class="message">
-                <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>email-outline</title><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg></i> <a href="#">Message</a>
-            </li>
-            <li class="task">
-                <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>clipboard-list-outline</title><path d="M19 3H14.82C14.4 1.84 13.3 1 12 1S9.6 1.84 9.18 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3M12 3C12.55 3 13 3.45 13 4S12.55 5 12 5 11 4.55 11 4 11.45 3 12 3M7 7H17V5H19V19H5V5H7V7M12 17V15H17V17H12M12 11V9H17V11H12M8 12V9H7V8H9V12H8M9.25 14C9.66 14 10 14.34 10 14.75C10 14.95 9.92 15.14 9.79 15.27L8.12 17H10V18H7V17.08L9 15H7V14H9.25" /></svg></i> <a href="#">Task</a>
-            </li>
-            <li class="community">
-                <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>account-group-outline</title><path d="M12,5A3.5,3.5 0 0,0 8.5,8.5A3.5,3.5 0 0,0 12,12A3.5,3.5 0 0,0 15.5,8.5A3.5,3.5 0 0,0 12,5M12,7A1.5,1.5 0 0,1 13.5,8.5A1.5,1.5 0 0,1 12,10A1.5,1.5 0 0,1 10.5,8.5A1.5,1.5 0 0,1 12,7M5.5,8A2.5,2.5 0 0,0 3,10.5C3,11.44 3.53,12.25 4.29,12.68C4.65,12.88 5.06,13 5.5,13C5.94,13 6.35,12.88 6.71,12.68C7.08,12.47 7.39,12.17 7.62,11.81C6.89,10.86 6.5,9.7 6.5,8.5C6.5,8.41 6.5,8.31 6.5,8.22C6.2,8.08 5.86,8 5.5,8M18.5,8C18.14,8 17.8,8.08 17.5,8.22C17.5,8.31 17.5,8.41 17.5,8.5C17.5,9.7 17.11,10.86 16.38,11.81C16.5,12 16.63,12.15 16.78,12.3C16.94,12.45 17.1,12.58 17.29,12.68C17.65,12.88 18.06,13 18.5,13C18.94,13 19.35,12.88 19.71,12.68C20.47,12.25 21,11.44 21,10.5A2.5,2.5 0 0,0 18.5,8M12,14C9.66,14 5,15.17 5,17.5V19H19V17.5C19,15.17 14.34,14 12,14M4.71,14.55C2.78,14.78 0,15.76 0,17.5V19H3V17.07C3,16.06 3.69,15.22 4.71,14.55M19.29,14.55C20.31,15.22 21,16.06 21,17.07V19H24V17.5C24,15.76 21.22,14.78 19.29,14.55M12,16C13.53,16 15.24,16.5 16.23,17H7.77C8.76,16.5 10.47,16 12,16Z" /></svg></i> <a href="#">Community</a>
-            </li>
-            <li class="trend" style="display: none;">
-                <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>newspaper-variant</title><path d="M20 3H4C2.89 3 2 3.89 2 5V19C2 20.11 2.89 21 4 21H20C21.11 21 22 20.11 22 19V5C22 3.89 21.11 3 20 3M5 7H10V13H5V7M19 17H5V15H19V17M19 13H12V11H19V13M19 9H12V7H19V9Z" /></svg></i> <a href="#">Trending</a>
-            </li>
+        <div  id="menu-section">
+            <ul class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active py-3 px-4">
+                    <i class="bi bi-house-door-fill"></i> Dashboard
+                </a>
+                <a href="#" class="Profile list-group-item list-group-item-action py-3 px-4">
+                    <i class="bi bi-person"></i> Profile
+                </a>
+                <a href="#" class="message list-group-item list-group-item-action py-3 px-4">
+                    <i class="bi bi-envelope"></i> Message
+                </a>
+                <a href="#" class="task list-group-item list-group-item-action py-3 px-4">
+                    <i class="bi bi-card-list"></i> Task
+                </a>
+                <a href="#" class="community list-group-item list-group-item-action py-3 px-4">
+                    <i class="bi bi-people"></i> Community
+                </a>
+                <a href="#" id="trend" class="trend list-group-item list-group-item-action d-none" style="display: none;">
+                    <i class="bi bi-newspaper"></i> Trending
+                </a>
+                <a href="#" class="list-group-item list-group-item-action py-3 px-4">Settings</a>
+                <a href="#" class="list-group-item list-group-item-action py-3 px-4">Support</a>
+                <a href="#" class="list-group-item list-group-item-action py-3 px-4">Logout</a>
+            </ul>
 
 
         </div>
-        <div class="support-part">
-            <li class="settings">
-                <a href="#">Settings</a>
-            </li>
-            <li class="support">
-                <a href="#">Support</a>
-            </li>
-            <li class="logout">
-                <a href="#">Logout</a>
-            </li>
+        <div id="support-part">
+            <ul class="list-group">
+                
+            </ul>
         </div>
     </section>
-    <section class="main-content">
-        <header>
-            <div class="top-header">
-                <div class="greetings">
-                    <svg id="menu-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
-                    <img src="./img-collections/users-image.JPG" alt="kizitos users-image">
+    <section class="col-12 col-lg-10">
+        <header class=" m-0 px-4 py-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="greetings d-flex align-items-center">
+                    <i id="menu-button" class="bi bi-list me-3 d-lg-none fs-1" ></i>
+                    <img src="./img-collections/users-image.JPG" alt="kizitos users-image" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
                     <div id="intro">
-                        <p>Good Morning</p>
-                        <h4>Kizito Iheanacho</h4>
+                        <p class="m-0 fs-6">Good Morning</p>
+                        <h5 class="m-0">Kizito Iheanacho</h5>
                     </div>
                 </div>
-                <div class="toolkit">
-                    <div class="notification">
-                        <div id="count">
-                            <p>3</p>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>bell-outline</title><path d="M10 21H14C14 22.1 13.1 23 12 23S10 22.1 10 21M21 19V20H3V19L5 17V11C5 7.9 7 5.2 10 4.3V4C10 2.9 10.9 2 12 2S14 2.9 14 4V4.3C17 5.2 19 7.9 19 11V17L21 19M17 11C17 8.2 14.8 6 12 6S7 8.2 7 11V18H17V11Z" /></svg>
+                <div class="d-flex align-items-center">
+                    <label id="shareworklabel" for="sharework" class="btn btn-outline-secondary rounded-pill fs-6 mx-3 px-3 d-md-flex">Share your work</label>
+                    <input type="file" id="sharework" class="d-none" style="appearance: none; border: none; outline: none;">
+                    <div class="position-relative me-4">
+                        <span id="count" class="badge d-flex justify-content-center align-items-center bg-primary rounded-circle position-absolute top-0 start-100 translate-middle" style="height: 16px; width: 16px;"> 3 </span>                    
+                        <i class="bi bi-bell-fill fs-4"></i>
                     </div>
-                    <a href="https://github.com/kizzylion" class="profile-section">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>github</title><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"></path></svg>
+                    <a href="https://github.com/kizzylion" class="">
+                        <i class="bi bi-github fs-3" style="color: black;"></i>
                     </a>
                 </div>
             </div>
-            <div class="tools">
-                <div id="searchbar" class="searchbar">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>magnify</title><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
-                    <input type="search" placeholder="Search" id="search">
+            <div class="d-flex justify-content-start align-items-center col-12">
+                <div id="searchbar" class="border border-0 rounded-pill pe-2 py-1   col-12 col-lg-10 position-relative">
+                    <form action="#">
+                        <input type="search" placeholder="Search" id="search" class="rounded-pill outline-0 fs-6 p-2 form-control">
+                        <button class=" position-absolute top-50 end-0 translate-middle-y btn btn-primary rounded-circle me-3 ">
+                            <i class="bi bi-search fs-6"></i>
+                        </button>
+                    </form>
                 </div>
-                <div class="share-work">
-                    <label for="sharework">Share your work</label>
-                    <input type="file" id="sharework">
-                </div>
-                
             </div>
             
         </header>
-        <div class="projects-section">
-            <main id="project">
-                <h3>My Project</h3>
-                <a href="#" class="file">
-                    <img src="./img-collections/calc1.jpg" alt="calculaator project">
-                    <h4 style="margin-left: 8px;">Calculator</h4>
-                    <p style="margin-left: 8px;">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
-                    <div class="cta">
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>thumb-up-outline</title><path d="M5,9V21H1V9H5M9,21A2,2 0 0,1 7,19V9C7,8.45 7.22,7.95 7.59,7.59L14.17,1L15.23,2.06C15.5,2.33 15.67,2.7 15.67,3.11L15.64,3.43L14.69,8H21C22.11,8 23,8.9 23,10V12C23,12.26 22.95,12.5 22.86,12.73L19.84,19.78C19.54,20.5 18.83,21 18,21H9M9,19H18.03L21,12V10H12.21L13.34,4.68L9,9.03V19Z" /></svg> -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>github</title><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" /></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>dots-vertical</title><path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" /></svg>
-                    </div>
-                </a>
-                <a href="#" class="file">
-                    <img src="./img-collections/calc1.jpg" alt="calculaator project">
-                    <h4 style="margin-left: 8px;">Calculator</h4>
-                    <p style="margin-left: 8px;">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
-                    <div class="cta">
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>thumb-up-outline</title><path d="M5,9V21H1V9H5M9,21A2,2 0 0,1 7,19V9C7,8.45 7.22,7.95 7.59,7.59L14.17,1L15.23,2.06C15.5,2.33 15.67,2.7 15.67,3.11L15.64,3.43L14.69,8H21C22.11,8 23,8.9 23,10V12C23,12.26 22.95,12.5 22.86,12.73L19.84,19.78C19.54,20.5 18.83,21 18,21H9M9,19H18.03L21,12V10H12.21L13.34,4.68L9,9.03V19Z" /></svg> -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>github</title><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" /></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>dots-vertical</title><path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" /></svg>
-                    </div>
-                </a>
-                <a href="#" class="file">
-                    <img src="./img-collections/calc1.jpg" alt="calculaator project">
-                    <h4 style="margin-left: 8px;">Calculator</h4>
-                    <p style="margin-left: 8px;">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
-                    <div class="cta">
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>thumb-up-outline</title><path d="M5,9V21H1V9H5M9,21A2,2 0 0,1 7,19V9C7,8.45 7.22,7.95 7.59,7.59L14.17,1L15.23,2.06C15.5,2.33 15.67,2.7 15.67,3.11L15.64,3.43L14.69,8H21C22.11,8 23,8.9 23,10V12C23,12.26 22.95,12.5 22.86,12.73L19.84,19.78C19.54,20.5 18.83,21 18,21H9M9,19H18.03L21,12V10H12.21L13.34,4.68L9,9.03V19Z" /></svg> -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>github</title><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" /></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>dots-vertical</title><path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" /></svg>
-                    </div>
-                </a>
-                <a href="#" class="file">
-                    <img src="./img-collections/calc1.jpg" alt="calculaator project">
-                    <h4 style="margin-left: 8px;">Calculator</h4>
-                    <p style="margin-left: 8px;">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
-                    <div class="cta">
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>thumb-up-outline</title><path d="M5,9V21H1V9H5M9,21A2,2 0 0,1 7,19V9C7,8.45 7.22,7.95 7.59,7.59L14.17,1L15.23,2.06C15.5,2.33 15.67,2.7 15.67,3.11L15.64,3.43L14.69,8H21C22.11,8 23,8.9 23,10V12C23,12.26 22.95,12.5 22.86,12.73L19.84,19.78C19.54,20.5 18.83,21 18,21H9M9,19H18.03L21,12V10H12.21L13.34,4.68L9,9.03V19Z" /></svg> -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>github</title><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" /></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>dots-vertical</title><path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" /></svg>
-                    </div>
-                </a>
-                <a href="#" class="file">
-                    <img src="./img-collections/calc1.jpg" alt="calculaator project">
-                    <h4 style="margin-left: 8px;">Calculator</h4>
-                    <p style="margin-left: 8px;">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
-                    <div class="cta">
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>thumb-up-outline</title><path d="M5,9V21H1V9H5M9,21A2,2 0 0,1 7,19V9C7,8.45 7.22,7.95 7.59,7.59L14.17,1L15.23,2.06C15.5,2.33 15.67,2.7 15.67,3.11L15.64,3.43L14.69,8H21C22.11,8 23,8.9 23,10V12C23,12.26 22.95,12.5 22.86,12.73L19.84,19.78C19.54,20.5 18.83,21 18,21H9M9,19H18.03L21,12V10H12.21L13.34,4.68L9,9.03V19Z" /></svg> -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>github</title><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" /></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>dots-vertical</title><path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" /></svg>
-                    </div>
-                </a>
-                <a href="#" class="file">
-                    <img src="./img-collections/calc1.jpg" alt="calculaator project">
-                    <h4 style="margin-left: 8px;">Calculator</h4>
-                    <p style="margin-left: 8px;">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
-                    <div class="cta">
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>thumb-up-outline</title><path d="M5,9V21H1V9H5M9,21A2,2 0 0,1 7,19V9C7,8.45 7.22,7.95 7.59,7.59L14.17,1L15.23,2.06C15.5,2.33 15.67,2.7 15.67,3.11L15.64,3.43L14.69,8H21C22.11,8 23,8.9 23,10V12C23,12.26 22.95,12.5 22.86,12.73L19.84,19.78C19.54,20.5 18.83,21 18,21H9M9,19H18.03L21,12V10H12.21L13.34,4.68L9,9.03V19Z" /></svg> -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>github</title><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" /></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>dots-vertical</title><path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" /></svg>
-                    </div>
-                </a>
+        <div id="frame" class="projects-section row p-4">
+            <main id="project" class="col col-md-8 col-lg-10">
+                <h4 class="mb-3">My Project</h4>
+                <div class="canvas d-grid" >
+                    <a href="#" class="card" style=" color: black;">
+                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
+                        <div class="card-body p-2">
+                            <h6 class="card-title" >Calculator</h6>
+                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
+                            <div class="cta d-flex align-items-center justify-content-end f-6">
+                                <i href="" class="bi bi-github me-3" ></i>
+                                <i class="bi bi-three-dots-vertical "></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card" style=" color: black;">
+                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
+                        <div class="card-body p-2">
+                            <h6 class="card-title" >Calculator</h6>
+                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
+                            <div class="cta d-flex align-items-center justify-content-end f-6">
+                                <i href="" class="bi bi-github me-3" ></i>
+                                <i class="bi bi-three-dots-vertical "></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card" style=" color: black;">
+                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
+                        <div class="card-body p-2">
+                            <h6 class="card-title" >Calculator</h6>
+                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
+                            <div class="cta d-flex align-items-center justify-content-end f-6">
+                                <i href="" class="bi bi-github me-3" ></i>
+                                <i class="bi bi-three-dots-vertical "></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card" style=" color: black;">
+                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
+                        <div class="card-body p-2">
+                            <h6 class="card-title" >Calculator</h6>
+                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
+                            <div class="cta d-flex align-items-center justify-content-end f-6">
+                                <i href="" class="bi bi-github me-3" ></i>
+                                <i class="bi bi-three-dots-vertical "></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card" style=" color: black;">
+                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
+                        <div class="card-body p-2">
+                            <h6 class="card-title" >Calculator</h6>
+                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
+                            <div class="cta d-flex align-items-center justify-content-end f-6">
+                                <i href="" class="bi bi-github me-3" ></i>
+                                <i class="bi bi-three-dots-vertical "></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card" style=" color: black;">
+                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
+                        <div class="card-body p-2">
+                            <h6 class="card-title" >Calculator</h6>
+                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
+                            <div class="cta d-flex align-items-center justify-content-end f-6">
+                                <i href="" class="bi bi-github me-3" ></i>
+                                <i class="bi bi-three-dots-vertical "></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card" style=" color: black;">
+                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
+                        <div class="card-body p-2">
+                            <h6 class="card-title" >Calculator</h6>
+                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
+                            <div class="cta d-flex align-items-center justify-content-end f-6">
+                                <i href="" class="bi bi-github me-3" ></i>
+                                <i class="bi bi-three-dots-vertical "></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card" style=" color: black;">
+                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
+                        <div class="card-body p-2">
+                            <h6 class="card-title" >Calculator</h6>
+                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
+                            <div class="cta d-flex align-items-center justify-content-end f-6">
+                                <i href="" class="bi bi-github me-3" ></i>
+                                <i class="bi bi-three-dots-vertical "></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="card" style=" color: black;">
+                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
+                        <div class="card-body p-2">
+                            <h6 class="card-title" >Calculator</h6>
+                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
+                            <div class="cta d-flex align-items-center justify-content-end f-6">
+                                <i href="" class="bi bi-github me-3" ></i>
+                                <i class="bi bi-three-dots-vertical "></i>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                </div>
+                
             </main>
-            <aside id="side-update">
+            <aside id="side-update" class="col-sm-12 col-md-4 col-lg-2 border-start">
                 <div class="latest">
-                    <h3>Recent Update</h3>
-                    <a href="#" class="news">
-                        <h4>Dashboard Loading</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore officia, ipsum velit ut molestiae cumque.</p>
-                        <h5>Read more<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right</title><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></h5>
+                    <h5 class="heading mb-3">Recent Update</h5>
+                    <a href="#" class="news mb-3 ">
+                        <h6 class="pt-2">Dashboard Loading</h6>
+                        <p class="fs-6 text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore officia, ipsum velit ut molestiae cumque.</p>
+                        <h6 class="pb-3 border-bottom">Read more<i class="bi bi-arrow-right ms-1"></i></h5>
                     </a>
-                    <a href="#" class="news">
-                        <h4>Dashboard Loading</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore officia, ipsum velit ut molestiae cumque.</p>
-                        <h5>Read more<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right</title><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></h5>
+                    <a href="#" class="news my-3 ">
+                        <h6 class="pt-2">Dashboard Loading</h6>
+                        <p class="fs-6 text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore officia, ipsum velit ut molestiae cumque.</p>
+                        <h6 class="pb-3 border-bottom">Read more<i class="bi bi-arrow-right ms-1"></i></h5>
                     </a>
-                    <a href="#" class="news">
-                        <h4>Dashboard Loading</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore officia, ipsum velit ut molestiae cumque.</p>
-                        <h5>Read more<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right</title><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></h5>
+                    <a href="#" class="news my-3 ">
+                        <h6 class="pt-2">Dashboard Loading</h6>
+                        <p class="fs-6 text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore officia, ipsum velit ut molestiae cumque.</p>
+                        <h6 class="pb-3 border-bottom">Read more<i class="bi bi-arrow-right ms-1"></i></h5>
                     </a>
+                    
                 </div>
 
                 <div class="trending">
-                    <h3>Trending</h3>
-                    <a href="#" class="news">
-                        <img src="./img-collections/logo.svg" alt="">
+                    <h5 class="heading mb-3">Trending</h5>
+                    <a href="#" class="d-flex align-items-top my-3">
+                        <img src="./img-collections/logo.svg" alt="" class="me-2 flex-grow-0" style="height: 28px;">
                         <div class="content">
-                            <h4>Dashboard Loading</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore officia, ipsum velit ut molestiae cumque.</p>
-                            <h5>Read more<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right</title><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></h5>
+                            <h6>Dashboard Loading</h6>
+                            <p class="fs-6 text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore officia, ipsum velit ut molestiae cumque.</p>
+                            <span>
+                                Read more<i class="bi bi-arrow-right ms-1"></i>
+                            </span>
                         </div>
                     </a>
-                    <a href="#" class="news">
-                        <img src="./img-collections/logo.svg" alt="">
+                    <a href="#" class="d-flex align-items-top my-3">
+                        <img src="./img-collections/logo.svg" alt="" class="me-2 flex-grow-0" style="height: 28px;">
                         <div class="content">
-                            <h5>Dashboard Loading</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore officia, ipsum velit ut molestiae cumque.</p>
-                            <h5>Read more<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right</title><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></h5>
+                            <h6>Dashboard Loading</h6>
+                            <p class="fs-6 text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore officia, ipsum velit ut molestiae cumque.</p>
+                            <span>
+                                Read more<i class="bi bi-arrow-right ms-1"></i>
+                            </span>
                         </div>
                     </a>
-                    <a href="#" class="news">
-                        <img src="./img-collections/logo.svg" alt="">
+                    <a href="#" class="d-flex align-items-top my-3">
+                        <img src="./img-collections/logo.svg" alt="" class="me-2 flex-grow-0" style="height: 28px;">
                         <div class="content">
-                            <h4>Dashboard Loading</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore officia, ipsum velit ut molestiae cumque.</p>
-                            <h5>Read more<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right</title><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg></h5>
+                            <h6>Dashboard Loading</h6>
+                            <p class="fs-6 text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore officia, ipsum velit ut molestiae cumque.</p>
+                            <span>
+                                Read more<i class="bi bi-arrow-right ms-1"></i>
+                            </span>
                         </div>
                     </a>
                     
                 </div>
             </aside>
+        </div>
     </section>
     
 </body>
