@@ -19,6 +19,12 @@ navBtn.forEach(link => {
     })
 })
 
+// using close button "X" to close side nav menu
+let closeBtn = document.querySelector("#closebtn")
+closeBtn.addEventListener("click", function(){
+    sideNav.classList.remove("activate")
+})
+
 
 // Share your work button fixed
 
@@ -34,3 +40,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+//BUTTON FOR PROJECT LINK
+
+const projectLinkBtn = document.querySelectorAll(".projectlink");
+
+Array.from(projectLinkBtn).forEach(btn =>{
+    btn.addEventListener("click", function(e){
+        e.preventDefault();
+        window.location.href = this.attributes[0].nodeValue;
+    })
+})

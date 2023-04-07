@@ -15,10 +15,14 @@
 </head>
 <body class="d-flex">
     <section id="side-nav" class="d-lg-block col-6 col-lg-2 border-end ">
-        <a href="#" class="logo-section d-flex p-4 align-items-center fs-3" style=" line-height: 36px; text-decoration: none;">
-            <img src="./img-collections/Enddata-logo2.png" class="me-2 " alt="Endata logo" style=" width: 48px; object-fit: cover;"> 
-            <span class="flex-fill d-none d-lg-flex">EnData</span> 
-        </a>
+        <div class="d-flex justify-content-between align-items-center">
+            <a href="#" class="logo-section d-flex p-4 align-items-center fs-3" style=" line-height: 36px; text-decoration: none;">
+                <img src="./img-collections/Enddata-logo2.png" class="me-2 " alt="Endata logo" style=" width: 48px; object-fit: cover;"> 
+                <span class="flex-fill d-none d-lg-flex">EnData</span> 
+            </a>
+            <i id="closebtn"  class="bi bi-x fs-1 me-3 d-lg-none"></i>
+        </div>
+       
         <div  id="menu-section">
             <ul class="list-group">
                 <a href="#" class="list-group-item list-group-item-action active py-3 px-4">
@@ -52,7 +56,7 @@
             </ul>
         </div>
     </section>
-    <section class="col-12 col-lg-10">
+    <section id="screen" class="col-12 col-lg-10">
         <header class=" m-0 px-4 py-4">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div class="greetings d-flex align-items-center">
@@ -92,106 +96,53 @@
             <main id="project" class="col col-md-8 col-lg-10">
                 <h4 class="mb-3">My Project</h4>
                 <div class="canvas d-grid" >
-                    <a href="#" class="card" style=" color: black;">
-                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
+                   
+                    <a href="https://kizzylion.github.io/rock_paper_scissor_game/" class="card" style=" color: black;">
+                        <img src="./img-collections/rock-paper.jpg" alt="calculaator project">
                         <div class="card-body p-2">
-                            <h6 class="card-title" >Calculator</h6>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
+                            <h6 class="card-title" >Rock-Paper-Scissors Game</h6>
+                            <p class="card-text text-muted">This is a simple implementation of grade-school classic "rock paper scissor" game</p>
                             <div class="cta d-flex align-items-center justify-content-end f-6">
-                                <i href="" class="bi bi-github me-3" ></i>
-                                <i class="bi bi-three-dots-vertical "></i>
+                                <button href="https://github.com/kizzylion/rock_paper_scissor_game" type="button" class="btn btn-link text-dark px-2 py-1 projectlink"><i href="" class="bi bi-github " ></i></button>
+                                <button href="" type="button" class="btn btn-link text-dark px-2 py-1"><i class="bi bi-three-dots-vertical"> </i></button>
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="card" style=" color: black;">
+                    <a href="https://kizzylion.github.io/calculator/" class="card" style=" color: black;">
                         <img src="./img-collections/calc1.jpg" alt="calculaator project">
                         <div class="card-body p-2">
-                            <h6 class="card-title" >Calculator</h6>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
+                            <h6 class="card-title" >Online Calculator</h6>
+                            <p class="card-text text-muted"> Cutting-edge calculator designed to simplify your mathematical calculations like never before. With its sleek and user-friendly interface, This calculator offers a seamless and efficient way to perform basic arithmetic, advanced mathematical operations, and scientific calculations with ease.                            </p>
                             <div class="cta d-flex align-items-center justify-content-end f-6">
-                                <i href="" class="bi bi-github me-3" ></i>
-                                <i class="bi bi-three-dots-vertical "></i>
+                                <button href="https://github.com/kizzylion/calculator" type="button" class="btn btn-link text-dark px-2 py-1 projectlink"><i href="" class="bi bi-github " ></i></button>
+                                <button href="" type="button" class="btn btn-link text-dark px-2 py-1"><i class="bi bi-three-dots-vertical"> </i></button>
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="card" style=" color: black;">
-                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
+                    <a href="https://kizzylion.github.io/Etch-A-Sketch/" class="card" style=" color: black;">
+                        <img src="./img-collections/etch-a-sketch.jpg" alt="calculaator project">
                         <div class="card-body p-2">
-                            <h6 class="card-title" >Calculator</h6>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
+                            <h6 class="card-title" >Etch a Sketch</h6>
+                            <p class="card-text text-muted">This project is a browser version of something between a sketchpad and an Etch-A-Sketch. I am building this to flex my DOM manipulation skills.</p>
                             <div class="cta d-flex align-items-center justify-content-end f-6">
-                                <i href="" class="bi bi-github me-3" ></i>
-                                <i class="bi bi-three-dots-vertical "></i>
+                                <button href="https://github.com/kizzylion/Etch-A-Sketch" type="button" class="btn btn-link text-dark px-2 py-1 projectlink"><i href="" class="bi bi-github " ></i></button>
+                                <button href="" type="button" class="btn btn-link text-dark px-2 py-1"><i class="bi bi-three-dots-vertical"> </i></button>
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="card" style=" color: black;">
-                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
+                    <a href="https://kizzylion.github.io/sign-up-form/" class="card" style=" color: black;">
+                        <img src="./img-collections/Signup-form.jpg" alt="calculaator project">
                         <div class="card-body p-2">
-                            <h6 class="card-title" >Calculator</h6>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
+                            <h6 class="card-title" >Signup Form</h6>
+                            <p class="card-text text-muted">The project features a user-friendly sign-up form with a visually appealing design and top-notch functionality</p>
                             <div class="cta d-flex align-items-center justify-content-end f-6">
-                                <i href="" class="bi bi-github me-3" ></i>
-                                <i class="bi bi-three-dots-vertical "></i>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="card" style=" color: black;">
-                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
-                        <div class="card-body p-2">
-                            <h6 class="card-title" >Calculator</h6>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
-                            <div class="cta d-flex align-items-center justify-content-end f-6">
-                                <i href="" class="bi bi-github me-3" ></i>
-                                <i class="bi bi-three-dots-vertical "></i>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="card" style=" color: black;">
-                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
-                        <div class="card-body p-2">
-                            <h6 class="card-title" >Calculator</h6>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
-                            <div class="cta d-flex align-items-center justify-content-end f-6">
-                                <i href="" class="bi bi-github me-3" ></i>
-                                <i class="bi bi-three-dots-vertical "></i>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="card" style=" color: black;">
-                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
-                        <div class="card-body p-2">
-                            <h6 class="card-title" >Calculator</h6>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
-                            <div class="cta d-flex align-items-center justify-content-end f-6">
-                                <i href="" class="bi bi-github me-3" ></i>
-                                <i class="bi bi-three-dots-vertical "></i>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="card" style=" color: black;">
-                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
-                        <div class="card-body p-2">
-                            <h6 class="card-title" >Calculator</h6>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
-                            <div class="cta d-flex align-items-center justify-content-end f-6">
-                                <i href="" class="bi bi-github me-3" ></i>
-                                <i class="bi bi-three-dots-vertical "></i>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="card" style=" color: black;">
-                        <img src="./img-collections/calc1.jpg" alt="calculaator project">
-                        <div class="card-body p-2">
-                            <h6 class="card-title" >Calculator</h6>
-                            <p class="card-text text-muted">Lorem ipsum dolor sit amet elit. Numquam modi sunt officiis temporibus nihil consequuntur laboriosam nobis corporis ex! Officiis, alias maxime reprehenderit inventore natus porro cupiditate earum dolorem nam pariatur quas, magnam in! Quaerat id ex sunt facilis doloribus aperiam culpa, sint doloremque repellat. Officia odit porro placeat quae!</p>
-                            <div class="cta d-flex align-items-center justify-content-end f-6">
-                                <i href="" class="bi bi-github me-3" ></i>
-                                <i class="bi bi-three-dots-vertical "></i>
+                                <button href="https://github.com/kizzylion/sign-up-form" type="button" class="btn btn-link text-dark px-2 py-1 projectlink"><i href="" class="bi bi-github " ></i></button>
+                                <button href="" type="button" class="btn btn-link text-dark px-2 py-1"><i class="bi bi-three-dots-vertical"> </i></button>
                             </div>
                         </div>
                     </a>
                     
+                
                     
                 </div>
                 
@@ -254,6 +205,15 @@
             </aside>
         </div>
     </section>
+    <footer class="bg-dark text-white d-flex justify-content-center align-items-center" style="position: fixed; bottom: 0; width: 100%;">
+        <p class="m-0 fs-5" style="display: inline;">
+            Copyright ©
+            <script> document.write(new Date().getFullYear())</script>
+            Kizzylion
+        </p>
+        <a href="https://github.com/kizzylion"><i class="bi bi-github fs-4 ms-2" style="color: white;"></i></a>
+        
+    </footer>
     
 </body>
 </html>

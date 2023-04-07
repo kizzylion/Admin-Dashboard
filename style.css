@@ -94,10 +94,14 @@
 
 #project > .canvas > a {
     text-decoration: none;
-    /* max-width: 18rem; */
     clip-path: fill-box;
     flex: 1 1 0;
 
+}
+
+.canvas > a:hover,
+.canvas > a:focus{
+    scale: 1.02;
 }
 
 #project a >img{
@@ -124,6 +128,12 @@
 #side-update  a{
     text-decoration: none;
 }
+
+#side-update a:hover,
+#side-update a:focus{
+    text-decoration: underline;
+}
+
 #side-update .latest a > p{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -153,6 +163,16 @@
     height: 100vh;
     overflow: none;
 }
+#side-nav.activate + #screen{
+    width: calc(100vw - 365px);
+}
+
+#closebtn:hover,
+#closebtn:focus{
+    background-color: #eee;
+    border: 1px solid #ddd ;
+}
+
 
 @media (max-width:768px) {
     #project {
