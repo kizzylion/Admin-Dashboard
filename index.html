@@ -13,7 +13,7 @@
 
     <title>Endata - Admin Dashboard</title>
 </head>
-<body class="d-flex">
+<body class="d-flex position-relative">
     <section id="side-nav" class="d-lg-block col-6 col-lg-2 border-end ">
         <div class="d-flex justify-content-between align-items-center">
             <a href="#" class="logo-section d-flex p-4 align-items-center fs-3" style=" line-height: 36px; text-decoration: none;">
@@ -69,7 +69,7 @@
                 </div>
                 <div class="d-flex align-items-center">
                     
-                    <input type="file" id="sharework" class="d-none" style="appearance: none; border: none; outline: none;">
+                    
                     <div class="position-relative me-4">
                         <span id="count" class="badge d-flex justify-content-center align-items-center bg-primary rounded-circle position-absolute top-0 start-100 translate-middle" style="height: 16px; width: 16px;"> 3 </span>                    
                         <i class="bi bi-bell-fill fs-4"></i>
@@ -88,7 +88,7 @@
                         </button>
                     </form>
                 </div>
-                <label id="shareworklabel" for="sharework" class="btn btn-outline-secondary rounded-pill fs-6 mx-3 px-3 d-md-flex col-4 col-lg-2 justify-content-center">Share your work</label>
+                <button id="shareworklabel" for="sharework" class="btn btn-outline-secondary rounded-pill fs-6 mx-3 px-3 d-md-flex col-4 col-lg-2 justify-content-center">Share your work</button>
             </div>
             
         </header>
@@ -205,6 +205,35 @@
             </aside>
         </div>
     </section>
+
+    <div id="file-uploader" class=" justify-content-center align-items-center position-absolute top-0 start-0" style="height: 100vh; width: 100vw;">
+        <div class=" col-5 bg-light pb-4 px-3 border rounded">
+            <form action="#" class="d-flex flex-column ">
+                <div class="ms-auto mb-3">
+                    <i id="closeformbtn"  class="bi bi-x fs-1 me-3 d-lg-none "></i>
+                </div>
+                <div class="col-auto mb-3">
+                    <label for="formFile" class="form-label">Add image here <i class="bi bi-arrow-down-circle-fill text-muted"></i> </label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <div class="col-auto mb-3">
+                    <label for="title" class="form-label">Project Title</label>
+                    <input class="form-control" type="text" id="title">
+                </div>
+                <div class="col-auto mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control"  id="description" placeholder="Describe your project here"></textarea>
+                </div>
+                <div class="col-auto mb-3">
+                    <label for="link" class="form-label">Project link</label>
+                    <input class="form-control" type="text" id="link">
+                </div>
+                <button type="submit" class="btn btn-primary">Upload</button>
+                
+            </form>
+        </div>
+    </div>
+    
     <footer class="bg-dark text-white d-flex justify-content-center align-items-center" style="position: fixed; bottom: 0; width: 100%;">
         <p class="m-0 fs-5" style="display: inline;">
             Copyright ©
@@ -214,6 +243,8 @@
         <a href="https://github.com/kizzylion"><i class="bi bi-github fs-4 ms-2" style="color: white;"></i></a>
         
     </footer>
+
+    
     
 </body>
 </html>

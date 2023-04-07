@@ -202,3 +202,17 @@
 @media ( max-width: 567px) {
 
 }
+
+#file-uploader{
+    background: #000000c9;
+    display: none;
+}
+
+.activex{
+    display: flex !important;
+}
+
+#closeformbtn:hover{
+    background: #ddd;
+    border: 1px solid #ccc;
+}

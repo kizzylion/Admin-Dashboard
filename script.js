@@ -52,3 +52,16 @@ Array.from(projectLinkBtn).forEach(btn =>{
         window.location.href = this.attributes[0].nodeValue;
     })
 })
+
+// Activating uploadd form
+let shareWork = document.querySelector("#shareworklabel")
+let fileUploader = document.querySelector("#file-uploader")
+
+shareWork.addEventListener("click", function(){
+    fileUploader.classList.add("activex")
+})
+
+let closeformbtn = document.getElementById("closeformbtn");
+    closeformbtn.addEventListener("click", function(){
+        fileUploader.classList.remove("activex")
+})
